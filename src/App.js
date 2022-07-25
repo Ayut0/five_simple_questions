@@ -7,20 +7,20 @@ import Content from './Contents/Content';
 import Header from './UI/Header';
 
 const darkTheme = createTheme({
-    palette:{
-      type: "dark",
-      primary:{
-        main: "#1A1A2E"
-      },
-      secondary: {
-        main: "#fc5185"
-      },
-      background:{
-        paper: "#364F6B",
-        default: "#364F6B"
-      }
-    }
-})
+  palette: {
+    type: "dark",
+    primary: {
+      main: "#FFE3D8",
+    },
+    secondary: {
+      main: "#fc5185",
+    },
+    background: {
+      paper: "#BBBBBB",
+      default: "#03506F",
+    },
+  },
+});
 
 function App() {
   return (
