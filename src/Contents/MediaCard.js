@@ -1,5 +1,13 @@
 import styled from "@emotion/styled";
-import { Card, CardActionArea, CardContent, CardMedia, Typography } from "@mui/material";
+// import { Card, CardActionArea, CardContent, CardMedia, Typography } from "@mui/material";
+import * as React from "react";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+
 import Image from "../Images/Sample.png"
 
 const useStyles = styled(theme =>({
@@ -8,8 +16,8 @@ const useStyles = styled(theme =>({
         background: theme.palette.primary.main
     },
     media: {
-        width: 200,
-        height: 200
+        height: 300,
+        width: 200
     }
 }));
 
@@ -17,23 +25,22 @@ const MediaCard = props =>{
     const {title} = props;
     const classes = useStyles();
 
-    return(
-        <Card className={classes.root}>
-            <CardActionArea>
-                <CardMedia
-                    className={classes.media}
-                    image={Image}
-                    title="Contemplative Reptile"
-                >
-                </CardMedia>
-                <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2" align="center">
-                        {title}
-                    </Typography>
-                </CardContent>
-            </CardActionArea>
-        </Card>
-    )
+    return (
+      <Card sx={{ maxWidth: 345, mb: 2 }}>
+        <CardMedia
+          component="img"
+          height="140"
+          image={Image}
+          alt="green iguana"
+          className={classes.media}
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2" align="center">
+            {title}
+          </Typography>
+        </CardContent>
+      </Card>
+    );
 }
 
 export default MediaCard;
