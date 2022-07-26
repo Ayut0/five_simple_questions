@@ -1,17 +1,9 @@
-import { Button, Toolbar } from "@mui/material";
-import Link from "@mui/material/Link";
+import DetailToolBar from "./ToolBar"
+
 
 const DetailView = ()=>{
     return(
-        <Toolbar>
-            <Link to="/">
-                <Button
-                    variant="contained"
-                >
-                    Back
-                </Button>
-            </Link>
-        </Toolbar>
+        <DetailToolBar />
     )
 }
 
